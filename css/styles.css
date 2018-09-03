@@ -1,14 +1,15 @@
-
 body {
 	margin-left: 20%;
 	margin-right: 20%;
   font-family: sans-serif;
 }
+img {
+ width: 100%;
+}
 /* top nav bar styles */
 .top-nav {
   width: 100%;
   display: table;
-
 }
 .logo-nav {
   width: 100px;
@@ -85,7 +86,6 @@ background-color: rgba(68, 75, 87, 0.6);
   text-align: center;
   font-size: 45px;
   font-weight: 200;
-
 }
 /* subnav */
 .sub-nav-wrapper {
@@ -138,6 +138,16 @@ background-color: rgba(68, 75, 87, 0.6);
 .main-description {
   font-size: 26px;
 }
+#order-card {
+     background-color: #444b57;
+    background-repeat:no-repeat;
+    border: black;
+    border-radius: 5px;
+    font-size: 20px;
+    color:white;
+    margin-left: 20px; 
+    padding: 6px 12px 6px 12px;
+}
 /* bank card benefits list*/
 .benefits-wrapper {
   display: grid;
@@ -168,7 +178,7 @@ background-color: rgba(68, 75, 87, 0.6);
 .subgrid {
   display: grid;
   grid-template-columns: 25% 75%;
-  padding: 10px;
+  padding: 0px;
 }
 /* price-list */
 #pricing {
@@ -177,10 +187,14 @@ border-collapse: collapse;
 #pricing td, #pricing th {
     padding: 8px;
     padding-top: 12px;
-    padding-bottom: 12px; 
+    padding-bottom: 12px;
 }
 #pricing th {
   text-align: right;
+  border-right: 1px solid rgba(68, 75, 87, 0.4);
+}
+table:first-of-col {
+width:10%;
 }
 /*app descrition */ 
 .app-container {
@@ -203,4 +217,23 @@ border-collapse: collapse;
 }
 .app-description li {
   margin: 0 0 10% 0;
+}
+.app-links {
+  margin-left:40%;
+}
+
+/*bottom navigation menu and footer */ 
+.bottom-menu {
+  display: grid;
+  grid-template-columns:25% 25% 25% 25%;
+  color:#444b57;
+  font-size: 15px; 
+  margin-top: 5%;
+}
+.bottom-menu ul {
+  list-style: none;
+}
+.bottom-menu-header {
+  font-weight: bold;
+  margin-bottom: 8px;
 }

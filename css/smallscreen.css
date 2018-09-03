@@ -1,0 +1,44 @@
+body {
+    background-color: lightblue;
+    text-align: center;
+    margin-right: 0%;
+    margin-left: 0%;
+}
+
+/*benefits-mobile-responsive */
+.benefits-wrapper {
+  display: block;
+  margin-left: 10%;
+
+}
+.benefits-wrapper img,.benefits-horizontal-list img  {
+	max-width: 80px;
+	margin-top: 15%;
+
+}
+.benefits-horizontal-list {
+  display: block;
+  margin-left: 10%;
+  margin-top: 10%;
+  margin-top: 15%;
+}
+/*  awards */ 
+.awards-content {
+	display:block;
+}
+/*pricing */
+
+
+/*bottom menu */
+.bottom-menu {
+	display: block;
+	padding-right: 10px;
+}
+.app-container {
+	display: block;
+}
+.app-links {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
