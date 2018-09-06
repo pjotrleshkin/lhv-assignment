@@ -14,7 +14,7 @@ Both of developement .css files are structured in  the same way as webpage eleme
 For example, if 'top-nav' class is first in html page, it is first in  .css files, if footer is the last one, it will be the last in .css.
 Done for ease of understanding and maintainability.
 
-3.HTML5 is linted with W3C validator. Only error is that 'button' should not be child of '<a>' element.
+3.HTML5 is linted with W3C validator. Only error is that 'button' should not be child of 'a' element.
   
   
 For production product it definetly needs to be fixed, but for  I decided not to go with that(at least for now)because it will affect readability of HTML(at least on my mind).
