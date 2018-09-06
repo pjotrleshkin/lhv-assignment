@@ -1,10 +1,18 @@
 body {
-	margin-left: 20%;
-	margin-right: 20%;
+	margin-left: 25%;
+	margin-right: 25%;
   font-family: sans-serif;
 }
-img {
- width: 100%;
+button {
+  cursor:pointer;
+  font-size: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  -webkit-transition-duration: 0.5s; /* Safari */
+  -moz-transition-duration: 0.5s; /*Mozilla*/
+  transition-duration: 0.5s;   /*Chrome and IE */
+  -o-transition-duration:0.5s; /*Opera */
 }
 /* top nav bar styles */
 .top-nav {
@@ -13,101 +21,76 @@ img {
 }
 .logo-nav {
   width: 100px;
-  float: left;
-  padding-right: 10px;
+  vertical-align: middle;
   display: table-cell;
 }
 .left-nav {
-  width: 20%;
-  float: left;
-  padding-right: 10px;
-   list-style: none;
-    display: table-cell;
+  vertical-align: middle;
+  list-style: none;
+  text-align: left;
+  display: table-cell;
+  padding-left: 0;
 }
 .right-nav {
-  width: 30%;
+  width: auto;
   float: right;
-  text-align: right;
    display: table-cell;
 }
-.top-nav button {
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-    font-size: 11px;
-    color: #444b57;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;   
+.top-nav-std-button {
+  color: #5b6b7b;
 }
-.top-nav button:hover {
-    color: black;
+/* I use class instead of id because I want to prevent possible specificity wars at login:hover, same story for other nav-bars*/ 
+.login { 
+    color: white ; 
+    background-color: #444b57;
+    background-color: rgba(68, 75, 87, 0.6);
+    border-radius: 12px;
+    padding: 16px 25px;
 }
-#login  {
-color:white;
-background-color: rgba(68, 75, 87, 0.6);
- border-radius: 12px;
-  padding :15px 25px;
+.right-nav {
+    width: auto;
+    vertical-align: middle;
 }
-#login:hover  {
+.login:hover  {
+    background-color: #444b57;
     background-color: rgba(68, 75, 87, 1);
 }
 /* mid nav bar styles */
-#mid-nav-wrapper {
+.mid-nav-wrapper {
 	margin-top: 30px;
   text-align: center;
 }
-#mid-nav {
+.mid-nav {
   align-items: center;
-  justify-content: center;
 }
-#mid-nav button {
-	 background-color: Transparent;
-    background-repeat:no-repeat;
-    border: black;
-    border-radius: 12px;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-    font-size: 11px;
-    color:#444b57;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s; 
+.mid-nav-button {
+    padding: 8px 10px;
+    color:#5b6b7b;
 }
-#mid-nav button:hover {
+.mid-nav button:hover {
     background-color: #444b57;
     color:white;
 }
-/* page subeading */
-.subheading {
-	margin-top: 50px;
+/* page subeadings */
+.main-subheading , .subheading {
+	margin-top: 150px;
   text-align: center;
   font-size: 45px;
   font-weight: 200;
 }
-/* subnav */
-.sub-nav-wrapper {
-	margin-top: 50px;
-  text-align: center;
+/*change margin of word "Noortekaart" for better design*/
+.main-subheading {
+ margin-top: 50px;
 }
+/* subnav(navigaton bar which will be only for that page) */
 .sub-nav {
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+    margin-top: 50px;
 }
 .sub-nav button {
-	 background-color: Transparent;
-    background-repeat:no-repeat;
-    border: black;
-    border-radius: 13px;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
     font-size: 16px;
     color:#444b57;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;   
+    padding: 6px 12px 6px 12px;
 }
 .sub-nav button:hover {
     background-color: #444b57;
@@ -120,87 +103,112 @@ background-color: rgba(68, 75, 87, 0.6);
   height: 60%;
 }
 .card-description {
-  padding: 15%;
-  text-align: left;
+padding-top: 15%;
+padding-bottom: 20%;
+text-align: left;
 }
-.card-description img {
-  object-fit: cover;
+.card-image img {
   width: 100%;
   max-height: 100%;
 	margin-left: auto;
 	margin-right: auto;
-  position: center;
   margin-top: 20%;
 }
-.short-description ul {
-    list-style-image: url('../img/checkSmall.svg');
+.small-card-image {
+  width: 20%;
+  float:left;
+  margin-left:10%;
+  cursor: pointer;
+}
+.ul-with-svg-check {
+  list-style-image: url('../img/svg/checkSmall.svg');
 }
 .main-description {
   font-size: 26px;
 }
-#order-card {
-     background-color: #444b57;
+.order-card {
+    background-color: #444b57;
+    background-color: rgba(68, 75, 87, 0.8);
     background-repeat:no-repeat;
-    border: black;
-    border-radius: 5px;
     font-size: 20px;
     color:white;
-    margin-left: 20px; 
+    margin-left: 5%; 
     padding: 6px 12px 6px 12px;
+}
+.order-card:hover {
+  background-color: #444b57;
+  background-color: rgba(68, 75, 87, 1);
 }
 /* bank card benefits list*/
 .benefits-wrapper {
   display: grid;
-  grid-template-columns: 10% 30% 10% 30%;
-  grid-gap: 5%;
-  margin-left: 10%;
-  margin-right: 10%;
+  grid-template-columns: 10% 40% 10% 40%;
+}
+.check-image img {
+  width: 80%;
 }
 .benefits-horizontal-list {
   display: grid;
-  grid-template-columns: 15% 15% 15% 15%;
-  grid-gap: 10%;
-  margin-left: 10%;
-  margin-top: 10%;
+  grid-template-columns: 25% 25% 25% 25%;
   text-align: center;
+}
+.sportland  {
+  text-align: right;
+}
+.sportland img {
+    width: auto;
+    height: 100px;
 }
 /* awards */
 .awards-content {
   display: grid;
   grid-template-columns: 35% 60%;
-  padding: 25px;
 }
-.side {
-  padding: 20px;
-  font-size: 15px;
-  text-align: center;
-}
-.subgrid {
+.grid-container {
   display: grid;
-  grid-template-columns: 25% 75%;
-  padding: 0px;
+  grid-template-columns: 25% 70% ;
+  padding: 5px;
+}
+.grid-container > div {
+  text-align: center;
+  font-size: 15px;
+}
+.item1 {
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+.item1 img{
+  width: 60%;
+}
+.number-description{
+display: flex;
+align-items: center;
 }
 /* price-list */
-#pricing {
+.pricing {
 border-collapse: collapse;
 }
-#pricing td, #pricing th {
-    padding: 8px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+.pricing td, .pricing th { 
+padding-top: 12px;
+padding-bottom: 12px;
 }
-#pricing th {
+.pricing th {
   text-align: right;
+  border-right: #444b57; /*fallback color */
   border-right: 1px solid rgba(68, 75, 87, 0.4);
+  padding-right: 25px;
 }
-table:first-of-col {
+.pricing td {
+  padding-left:25px;
+}
+/*name of service column */ 
+.pricing:first-of-col {
 width:10%;
 }
 /*app descrition */ 
 .app-container {
   display: grid;
   grid-template-columns: 50% 50% ;
-  padding: 10px;
   margin-left: 20%;
   margin-right: 20%;
 }
@@ -208,21 +216,23 @@ width:10%;
   padding: 10px;
   text-align: left;
 }
-#app-picture {
-   max-width:100%;
-}
-.app-description ul {
-  list-style-image: url('../img/checkSmall.svg');
-  font-size: 12px;
+.app-image img {
+   width:100%;
 }
 .app-description li {
   margin: 0 0 10% 0;
 }
 .app-links {
-  margin-left:40%;
+ text-align:center;
 }
-
-/*bottom navigation menu and footer */ 
+.app-link{
+    display:inline-block;
+    padding:5px;
+}
+.centered-text {
+  text-align:center;
+}
+/*bottom navigation menu */ 
 .bottom-menu {
   display: grid;
   grid-template-columns:25% 25% 25% 25%;
@@ -232,8 +242,13 @@ width:10%;
 }
 .bottom-menu ul {
   list-style: none;
+  font-size: 12px;
 }
 .bottom-menu-header {
   font-weight: bold;
   margin-bottom: 8px;
+}
+footer {
+  font-size:10px;
+  color:#444b57;
 }

@@ -9,83 +9,101 @@
   <meta name="keywords" content="Pankandus, pank, noortekaart, soodustused">
   <meta name="author" content="LHV">
   <!-- scale for mobile devices -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- css styles -->
   <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <link rel="stylesheet" media="screen and (max-width: 600px)" href="css/smallscreen.css">
+  <link rel="stylesheet" media="screen and (max-width: 968px)" href="css/smallscreen.css">
+  <!--favicon-->
+  <!--[if IE]><link rel="shortcut icon" href="img/png/favicon.png"><![endif]-->
+  <link rel="icon" href="img/png/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="img/png/favicon.png">
 </head>
 <body>
-<!--top nav -->
+
+<!--top navigation bar (with logo) -->
 <div class="top-nav">
-    <div class="logo-nav" style = 'margin-top:20px'>
-    <a href = ''><img src="img/lhv-logo.svg" alt = 'Koduleht'></a>
-	</div>
-    <div class="left-nav">	
-    	<li><button>PANK</button></li>
-  		<li><button>FINANTSPORTAAL</button></li>
-  		<li><button>INVESTOR</button></li>
-  	</div>
-    <div class="right-nav">
-    <button>AVA KONTO</button>
-	<button id = 'login'>SISENE</button>
-	<button >EN</button>
-	<button >RU</button>
-	</div>
-</div>
-<!--end of top nav -->
-<!-- mid-nav --> 
-<div id="mid-nav-wrapper">    
-    <div id="mid-nav">
-<button>IGAPÄEVAPANKONDUS</button>
-<button>RAHA KASVATAMINE</button>
-<button>LAEN JA LIISING</button>
-<button>PENSION</button>
-<button>VAJAD ABI?</button>
+    <div class="logo-nav">
+    <a href = '#'>
+      <img src="img/svg/lhv-logo.svg" alt = 'Koduleht'>
+    </a>
     </div>
+    <ul class="left-nav">	
+    <li><button class = 'top-nav-std-button'>PANK</button></li>
+  	<li><button class = 'top-nav-std-button'>FINANTSPORTAAL</button></li>
+  	<li><button class = 'top-nav-std-button'>INVESTOR</button></li>
+  	</ul>
+
+    <div class="right-nav">
+    <button class = 'top-nav-std-button'>AVA KONTO</button>
+	  <button class = 'login'>SISENE</button>
+	  <button class = 'top-nav-std-button'>EN</button>
+	  <button class = 'top-nav-std-button'>RU</button>
+	  </div>
 </div>
-<!-- end of mid-nav -->
+<!-- mid navigation bar (centered) --> 
+<div class="mid-nav-wrapper">    
+  <div class="mid-nav">
+  <button class = 'mid-nav-button'>IGAPÄEVAPANKONDUS</button>
+  <button class = 'mid-nav-button'>RAHA KASVATAMINE</button>
+  <button class = 'mid-nav-button'>LAEN JA LIISING</button>
+  <button class = 'mid-nav-button'>PENSION</button>
+  <button class = 'mid-nav-button'>VAJAD ABI?</button>
+  </div>
+</div>
+
+
+
 <!-- page Subheading -->
-<div class  = 'subheading'>
+<div class  = 'main-subheading'>
 <p>Noortekaart</p>
 </div>
-<!-- end of page subheading -->
 <!-- page submenu -->
-<div class = 'sub-nav-wrapper'>
-<div class  = 'sub-nav'>
-<button>Omadused</button>
-<button>Auhinnad</button>
-<button>Soodustused</button>
-<button>Tingimused</button>
-<button>Telli kaart</button>
-</div>
-</div>
-<!-- end of page submenu -->
+  <div class  = 'sub-nav'>
+    <a href = '#main-subheading' ><button>Omadused</button></a>
+    <a href = '#benefits-list'><button>Auhinnad</button></a>
+    <a href = '#benefits-with-bc'><button>Soodustused</button></a>
+    <a href = '#pricing-table'><button>Tingimused</button></a>
+    <a ><button>Telli kaart</button></a>
+  </div>
+
+
+<div class ='content'>
 <!-- bank card short description with card image -->
-<div class="short-description">
+<div  class = 'short-description ' id = 'short-description'>
   <div class="card-description">
   	<p class = 'main-description'>
   		<strong>LHV Noortekaardiga</strong> saad maksta viibates,
-   kasutada partnerite soodustusi ja osaleda loosimistes
-</p>
-<ul>
-<li>Tasuta pangakaart</li>	
-<li>Naudi soodustusi</li>
-<li>Maksa kaardiga ja võid võita auhindu Sinu ostud on kindlustatud</li>
-<li>Vali oma värv</li>
-	</ul>
-  <button id = 'order-card'>Telli kaart</button>
-</div>
-  <div class="card-description">
-  <img src="img/noortekaart.png" alt = 'noortekaarti foto pole saadav'>
+      kasutada partnerite soodustusi ja osaleda loosimistes
+    </p>
+    <ul class = 'ul-with-svg-check'>
+    <li>Tasuta pangakaart</li>	
+    <li>Naudi soodustusi</li>
+    <li>Maksa kaardiga ja võid võita auhindu Sinu ostud on kindlustatud</li>
+    <li>Vali oma värv</li>
+	  </ul>
+    <button class = 'order-card'>Telli kaart</button>
+  </div>
+  <div class="card-image">
+    <img src="img/png/red-card.png" alt = 'noortekaarti foto pole saadav' id = 'main-image'>
+    <div class = 'small-card-image'>
+      <img src = 'img/png/black-card.png' alt = 'noortekaarti foto pole saadav' onclick = "document.getElementById('main-image').src='img/png/black-card.png'">
+    </div>
+    <div class = 'small-card-image'>
+    <img src = 'img/png/white-card.png' alt = 'noortekaarti foto pole saadav' onclick = "document.getElementById('main-image').src='img/png/white-card.png'">
+    </div>
+    <div class = 'small-card-image'>
+    <img src = 'img/png/red-card.png' alt = 'noortekaarti foto pole saadav' onclick = "document.getElementById('main-image').src='img/png/red-card.png'">
+    </div>
   </div>
 </div>
+
 <!-- bc benefits description -->
-<div class = 'subheading'>
+<div class = 'subheading' id = 'benefits-list'>
 	<p>Noortekaart on kõikvõimas</p>
 </div>
 <div class="benefits-wrapper">
  <div class = 'check-image'>
-<img src="img/check.svg" alt =''>
+<img src="img/svg/check.svg" alt =''>
  </div>
  <div class = 'benefits-content'>
  	<strong>Teenustasudeta pangakaart</strong>
@@ -94,7 +112,7 @@
  Euroopa makseid teed meie juures tasuta – ülekannetel teenustasu ei ole.</p>
  </div>
  <div class = 'check-image'>
-<img src="img/check.svg" alt =''>
+<img src="img/svg/check.svg" alt =''>
  </div>
  <div class = 'benefits-content'>
 <strong>Maksa Noortekaardiga ja võida auhindu</strong>
@@ -102,7 +120,7 @@
  Mida tihemini oma Noortekaardiga maksad, seda suurem on auhind ja võiduvõimalus.</p>
  </div>
   <div class = 'check-image'>
-<img src="img/check.svg" alt =''>
+<img src="img/svg/check.svg" alt =''>
  </div>
  <div class = 'benefits-content'>
 <strong>Maksa viibates</strong>
@@ -110,125 +128,118 @@
 	mis on mugav ja kiire viis kuni 25-euroste maksete tegemiseks.</p>
  </div>
   <div class = 'check-image'>
-<img src="img/check.svg" alt =''>
+<img src="img/svg/check.svg" alt =''>
  </div>
  <div class = 'benefits-content'>
 <strong>Noortekaardiga saad soodustusi</strong>
 <p>Noortekaardiga saad nautida meie partnerite sooduspakkumisi.</p>
  </div>
   <div class = 'check-image'>
-<img src="img/check.svg" alt =''>
+<img src="img/svg/check.svg" alt =''>
  </div>
  <div class = 'benefits-content'>
 <strong>Ostukindlustus</strong>
 <p>Ostukindlustus kaitseb 180 päeva jooksul pärast ostu sooritamist kõiki kestvuskaupu,
 	mille eest oled maksnud Noortekaardiga.</p>
  </div>
- <div class = 'check-image' alt =''>
-<img src="img/check.svg">
+ <div class = 'check-image' >
+<img src="img/svg/check.svg" alt =''>
  </div>
  <div class = 'benefits-content'>
 <strong>Sularahaautomaadid</strong>
 <p>LHV sularahaautomaadist on sularaha väljavõtmine tasuta. Teiste pankade automaatidest võtad nii Eestis kui ka Euroopas sularaha välja vaid 1 € eest.</p>
  </div>
 </div>
-<!-- end of vertical bullet list -->
+<div class = 'subheading' id = 'benefits-with-bc'>
+  <p>Soodustused Noortekaardiga</p>
+</div>
+<!-- card benefits horizontal list -->
 <div class = 'benefits-horizontal-list'>
 <div class = 'benefits-content'>
-<img src="img/coffee.svg" alt =''>
+<img src="img/svg/coffee.svg" alt =''>
 <p><strong>R-kiosk</strong></p>
-<p>Noortekaardiga makstes on kõik kuumad söögid ja joogid 20% soodsamad.</p>
+<p>Noortekaardiga makstes on kõik kuumad söögid ja joogid 20% soodsamad.</p>
 </div>
 
 <div class = 'benefits-content'>
-<img src="img/weights.svg" alt =''>
+<img src="img/svg/weights.svg" alt =''>
 <p><strong>MyFitness</strong></p>
-<p>Täispakett maksab 54 €, liitumine ükskõik millise paketiga on tasuta.</p>
+<p>Täispakett maksab 54 €, liitumine ükskõik millise paketiga on tasuta.</p>
 </div>
 
 <div class = 'benefits-content'>
-<img src="img/bus.svg" alt =''>
+<img src="img/svg/bus.svg" alt =''>
 <p><strong>Lux Express</strong></p>
-<p>Noortekaardi ette näitamisel on kõikidel eestisisestel liinidel soodustus 30%.</p>
+<p>Noortekaardi ette näitamisel on kõikidel eestisisestel liinidel soodustus 30%.</p>
 </div>
 
 <div class = 'benefits-content'>
-<img src="img/skateboard.svg"  alt =''> 
+<img src="img/svg/skateboard.svg"  alt =''> 
 <p><strong>Sportland</strong></p>
-<p>Noortekaardiga makstes on iga kuu ühe kaubamärgi tooted 20% soodsamad.</p>
+<p>Noortekaardiga makstes on iga kuu ühe kaubamärgi tooted 20% soodsamad.</p>
 </div>
 </div>
-<!-- end of horizontal benefits list -->
-<!-- end of card benefits block -->
+<div class = 'sportland'>
+<img src="img/png/sportland.png" alt = ''>
+</div>
 <!-- auhinnad -->
 <div class = 'awards'>
-	<div class  = 'awards-subheading'></div>
+	<div class  = 'subheading'>
+    <p>Auhinnad Noortekaardiga </p>
+  </div>
 
 <div class="awards-content">
-  <div class="side">
+  <div class="awards-left-description">
+    <div class = 'awards-left-wrapper'>
     <p>
-      <strong>Noortekaardiga makstes võid võita auhindu</strong>
+      <strong>Noortekaardiga makstes võid võita auhindu</strong>
     </p>
   <p>
   Noortekaardiga makstes osaled iga kuu loosimises.
   Mida tihemini Noortekaardiga maksad, seda suurem
-  on auhind ja võiduvõimalus.
+  on auhind ja võiduvõimalus.
 	</p>
+</div>
 	</div>
   <div class="side">
-  <div class='subgrid'>
-  <div class = 'subgridNumber'>
-  <img src="img/10.svg" alt ='10'>
-  </div> 
-  <div class = 'subgridContent'>
-  <p>Kui teed 10 või rohkem kaardimakset kuus, osaled Apollo kino kinkepileite loosis. Loosime välja 100x2 Apollo kino kinkepiletit.</p>
-  </div>
-    <div class = 'subgridNumber'>
-<img src="img/20.svg" alt ='20'>
-
-  </div> 
-  <div class = 'subgridContent'>
-  <p>Kui teed 20 või rohkem kaardimakset kuus, osaled Partner kinkekaartide loosis. Loosime välja 50x25 € Partner kinkekaarti.</p>
-  </div>
-    <div class = 'subgridNumber'>
-<img src="img/30.svg" alt ='30'>
-
-  </div> 
-  <div class = 'subgridContent'>
-  <p>Kui teed 30 või rohkem kaardimakset kuus, loosime välja 25x50 € Sportlandi kinkekaarti.</p>
-  </div>
-  </div>
+<div class="grid-container">
+  <div class="item1"><img src="img/svg/102030.svg"  alt = ''></div>
+  <div class="number-description">  Kui teed 10 või rohkem kaardimakset kuus, osaled Apollo kino kinkepileite loosis. Loosime välja 100x2 Apollo kino kinkepiletit.
+</div>
+  <div class="number-description">  Kui teed 20 või rohkem kaardimakset kuus, osaled Partner kinkekaartide loosis. Loosime välja 50x25 € Partner kinkekaarti.
+</div>  
+  <div class="number-description"> Kui teed 30 või rohkem kaardimakset kuus, loosime välja 25x50 € Sportlandi kinkekaarti.
+</div>
+</div>
 </div>
 </div>
 <!-- end of awards block -->
-  <div class = 'subheading'>
+  <div class = 'subheading' id = 'pricing-table'>
   <p>Hinnakiri ja tingimused</p>
 </div>
 
-
-<table id = 'pricing'>
-  <col style="">
-  <col style="">
+<table class = 'pricing'>
+  <col>
+  <col>
   <tbody>
   <tr>
     <th>Kuutasu</th>
     <td>Ei ole</td>
   </tr>
   <tr>
-    <th>Väljastamine, uuendamine, sulgemine</th>
+    <th>Väljastamine, uuendamine, sulgemine</th>
     <td>Tasuta</td>
   </tr>
   <tr>
-    <th>Sularaha väljavõtmine</th>
+    <th>Sularaha väljavõtmine</th>
     <td>
     <ul>
-  <li>LHV sularahaautomaadist: tasuta (+ 0,3% summast, mis ületab 10 000 € kuus)</li>
+  <li>LHV sularahaautomaadist: tasuta (+ 0,3% summast, mis ületab 10 000 € kuus)</li>
   <li>Teiste pankade sularahaautomaadist: arvelduskontolt Eestis ja Euroopa Majanduspiirkonna lepinguriigis €1ja
-mujal välismaal 2 € + 2,5% summast</li>
+mujal välismaal 2 € + 2,5% summast</li>
   </ul>
   </td>
   </tr>
-
   <tr>
     <th>Asendamine</th>
     <td>5€</td>
@@ -238,7 +249,7 @@ mujal välismaal 2 € + 2,5% summast</li>
     <td>LHV sularahaautomaadis tasuta</td>
   </tr>
      <tr>
-    <th>Infopäring sularahaautomaadist</th>
+    <th>Infopäring sularahaautomaadist</th>
     <td>  <ul>
     <li>LHV sularahaautomaadist tasuta</li>
     <li>Teiste pankade automaatidest Eestis 0,2 €</li>
@@ -250,67 +261,59 @@ mujal välismaal 2 € + 2,5% summast</li>
 <div class = 'subheading'>
   LHV mobiilibank
 </div>
-<p style = 'text-align:center'>on mugav äpp sinu telefonis, kus saad:</p>
+<p style = 'text-align:center'>on mugav äpp sinu telefonis, kus saad:</p>
 
 <div class="app-container">
-  <div class="app-image"><img src="img/app.png" id = 'app-picture'></div>
+  <div class="app-image"><img src="img/png/app.png" id = 'app-picture' alt = ''></div>
   <div class="app-description">
-  <ul>
- <li> Aktiveerida või blokeerida oma pangakaarti Vaadata kontojääki ja väljavõtet</li>
+  <ul class = 'ul-with-svg-check'>
+ <li> Aktiveerida või blokeerida oma pangakaarti Vaadata kontojääki ja väljavõtet</li>
 <li>Teha makseid kiirelt ja mugavalt</li>
 <li>Edastada oma kontonumbrit SMS-ga</li>
-<li>Tellida teavitusi kontole laekuva raha, makse ebaõnnestumise või limiidi täitumise kohta</li>
+<li>Tellida teavitusi kontole laekuva raha, makse ebaõnnestumise või limiidi täitumise kohta</li>
   </ul>
   </div>
 </div>
-
-
-<div>
-<p style = 'text-align:center; margin-left:30%; margin-right:30%'>
+<p  class ='centered-text'>
 Laadi LHV mobiilipank oma telefoni, et saaksid rahaasjadele ligi igal pool ja igal ajal.
 </p>
-<div class = 'app-links' style = ''>
-<img src = 'img/app-store.svg' style = 'width:100px; height:40px;'>
-<img src = 'img/google-play.png' style = 'width:100px; height:40px;'>
+<div class = 'app-links'>
+<div class = 'app-link'>
+  <img src = 'img/svg/app-store.svg' style = 'width:135px; height:60px;' alt ="hanki see app-st">
+</div>
+<div class = 'app-link'>
+  <img src = 'img/png/google-play.png' style = 'width:140px; height:60px;' alt ="hanki see app-st">
 </div>
 </div>
+</div>
+
 <div class='bottom-menu'>
   <div class = 'become-client'>
     <ul>
       <li class = 'bottom-menu-header'>TULE KLIENDIKS</li>
       <li>Eraklient</li>
-      <li>Äriklient</li>
+      <li>Äriklient</li>
       <li>Privaatpangandus</li>
       <li>Ava konto</li>
     </ul>
-
-    
-
-
   </div>
   <div class = 'find-fast'>
     <ul>
       <li class = 'bottom-menu-header'>LEIA KIIRELT</li>
       <li>Hinnakiri ja tingimused</li>
       <li>Ettepanekud ja kaebused</li>
-      <li>  KKK</li>
+      <li>KKK</li>
     </ul>
   </div>
-
   <div class = 'lhv-as-business'>
     <ul>
       <li class = 'bottom-menu-header'>LHV</li>
-      <li>Ettevõttest</li>
-      <li> Tööpakkumised </li>
-      <li> Pressiteated</li>
+      <li>Ettevõttest</li>
+      <li>Tööpakkumised </li>
+      <li>Pressiteated</li>
       <li>Investor</li>
       <li>Finantsportaal</li>
     </ul>
-    
-
-
-
-
   </div>
   <div class = 'customer-support'>
     <ul>
@@ -319,11 +322,13 @@ Laadi LHV mobiilipank oma telefoni, et saaksid rahaasjadele ligi igal pool ja ig
     <li>Kontorid</li>
     <li>Sularahaautomaadid</li>
   </ul>
-
-
   </div>
-</div>
-<footer style = 'font-size:10px; color:grey;'>
-© 2001 - 2016 AS LHV Pank. Oled finantsteenuseid pakkuvate ettevõtete AS LHV Pank, AS LHV Finance ja AS LHV Varahaldus veebilehel. Ettevõtetel AS LHV Pank, AS LHV Finance ja AS LHV Varahaldus on õigus salvestada kõiki neile sidevahendite teel antud korraldusi ja muud suhtlust ning kasutada vastavaid salvestisi antud korralduste või muude toimingute tõendamiseks. Enne finantsteenuse lepingu sõlmimist tutvu teenuse tingimustega või küsi lisainfot. Veebilehte ja sellel sisalduvat informatsiooni kasutades nõustud eeltoodud tingimuste ja veebilehe kasutustingimustega. Noteeringud on viivitusega. Lisainfo
+  
+</div> <!-- end of bottom menu div-->
+</div> <!-- end of content div-->
+<footer>
+© 2001 - 2016 AS LHV Pank. Oled finantsteenuseid pakkuvate ettevõtete AS LHV Pank, AS LHV Finance ja AS LHV Varahaldus veebilehel. Ettevõtetel AS LHV Pank, AS LHV Finance ja AS LHV Varahaldus on õigus salvestada kõiki neile sidevahendite teel antud korraldusi ja muud suhtlust ning kasutada vastavaid salvestisi antud korralduste või muude toimingute tõendamiseks. Enne finantsteenuse lepingu sõlmimist tutvu teenuse tingimustega või küsi lisainfot. Veebilehte ja sellel sisalduvat informatsiooni kasutades nõustud eeltoodud tingimuste ja veebilehe kasutustingimustega. Noteeringud on viivitusega. Lisainfo
 </footer>
+<!-- smoothScroll script -->
+<script src ='js/scroll.js'></script>
 </body>

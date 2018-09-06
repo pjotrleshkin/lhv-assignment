@@ -1,44 +1,59 @@
+/* utilize all the space on mobile devices */ 
 body {
-    background-color: lightblue;
     text-align: center;
-    margin-right: 0%;
-    margin-left: 0%;
+    margin-right: 0;
+    margin-left: 0;
+}
+/* top navbar adjustments for tablets*/ 
+.login {
+    display: block;
 }
 
-/*benefits-mobile-responsive */
+.right-nav {
+    margin-right: 10px;
+}
+/* webpage content alignments */
+.short-description {
+  display: block;
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+}
+.short-description  img{
+  display: block;
+  margin-top:30px;
+  width: 70%;
+}
 .benefits-wrapper {
   display: block;
-  margin-left: 10%;
-
+  margin-left: 7.5%;
+  margin-right: 7.5%;
 }
 .benefits-wrapper img,.benefits-horizontal-list img  {
 	max-width: 80px;
 	margin-top: 15%;
-
 }
 .benefits-horizontal-list {
   display: block;
-  margin-left: 10%;
-  margin-top: 10%;
   margin-top: 15%;
+  margin-left: 0;
 }
-/*  awards */ 
 .awards-content {
 	display:block;
 }
-/*pricing */
-
-
+/* services table table */ 
+.pricing th, .pricing td {
+  padding-left: 0;
+  padding-right: 0;
+}
 /*bottom menu */
 .bottom-menu {
 	display: block;
-	padding-right: 10px;
+  margin-right: 10%;
 }
 .app-container {
 	display: block;
 }
 .app-links {
-	margin-left: 0px;
-	margin-right: 0px;
+	margin-left: 0;
+	margin-right: 0;
 }
-
