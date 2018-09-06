@@ -4,13 +4,13 @@ body {
     margin-right: 0;
     margin-left: 0;
 }
-/* top navbar adjustments for tablets*/ 
-.login {
-    display: block;
+/* top nav */
+.logo {
+  padding-left: 10px;
 }
 
-.right-nav {
-    margin-right: 10px;
+.login {
+    display: block;
 }
 /* webpage content alignments */
 .short-description {
@@ -22,6 +22,9 @@ body {
   display: block;
   margin-top:30px;
   width: 70%;
+}
+.order-card {
+  margin-left: 33%;
 }
 .benefits-wrapper {
   display: block;

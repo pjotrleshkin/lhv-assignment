@@ -14,27 +14,40 @@ button {
   transition-duration: 0.5s;   /*Chrome and IE */
   -o-transition-duration:0.5s; /*Opera */
 }
-/* top nav bar styles */
+/* top nav bar styles;
+1px width - for dissalowing auto positioning and let .pad take all avalible space
+only way I found to make top navbar  valid(w3c validator) */
 .top-nav {
-  width: 100%;
-  display: table;
+    width: 100%;
+    display: table;
+    padding-top: 10px;
 }
-.logo-nav {
-  width: 100px;
-  vertical-align: middle;
-  display: table-cell;
+.logo {
+    display: table-cell;
+    vertical-align: middle;
+    height: 2rem;
+    width: 1px;
 }
-.left-nav {
-  vertical-align: middle;
-  list-style: none;
-  text-align: left;
-  display: table-cell;
-  padding-left: 0;
+.left-links {
+    display: table-cell;
+    vertical-align: middle;
+    white-space: nowrap;
 }
-.right-nav {
-  width: auto;
-  float: right;
-   display: table-cell;
+.left-links li {
+    display: block;
+}
+.pad {
+    display: table-cell;
+    width: auto;
+}
+.right-links {
+    display: table-cell;
+    width: 1px;
+    vertical-align: middle;  
+    white-space: nowrap;
+}
+.right-links li {
+    display: inline-block;
 }
 .top-nav-std-button {
   color: #5b6b7b;
@@ -42,17 +55,13 @@ button {
 /* I use class instead of id because I want to prevent possible specificity wars at login:hover, same story for other nav-bars*/ 
 .login { 
     color: white ; 
-    background-color: #444b57;
+    background-color: #444b57;  /* fallback color  */ 
     background-color: rgba(68, 75, 87, 0.6);
     border-radius: 12px;
     padding: 16px 25px;
 }
-.right-nav {
-    width: auto;
-    vertical-align: middle;
-}
 .login:hover  {
-    background-color: #444b57;
+    background-color: #444b57;  /* fallback color  */ 
     background-color: rgba(68, 75, 87, 1);
 }
 /* mid nav bar styles */
@@ -103,8 +112,8 @@ button {
   height: 60%;
 }
 .card-description {
-padding-top: 15%;
-padding-bottom: 20%;
+padding-top: 7.5%;
+padding-bottom: 1%;
 text-align: left;
 }
 .card-image img {
@@ -127,16 +136,17 @@ text-align: left;
   font-size: 26px;
 }
 .order-card {
-    background-color: #444b57;
+    background-color: #444b57; /* fallback color  */ 
     background-color: rgba(68, 75, 87, 0.8);
     background-repeat:no-repeat;
     font-size: 20px;
     color:white;
-    margin-left: 5%; 
+    margin-left: 7.5%; 
+    margin-top: 7.5%;
     padding: 6px 12px 6px 12px;
 }
 .order-card:hover {
-  background-color: #444b57;
+  background-color: #444b57; /* fallback color  */ 
   background-color: rgba(68, 75, 87, 1);
 }
 /* bank card benefits list*/
