@@ -1,6 +1,6 @@
 Working example can be found  at https://pjotrleshkin.com/lhv
 --
-Additionally for mobile-responsive design I've added a feauture of bank card color change(onclick) and smooth-scroll.
+I've added a feauture of bank card color change(onclick) and smooth-scroll.Also made some adjustments in design(for example added line to pricing-table).
 Project has no dependencies and is done in vanillaJS/HTML5/CSS3 stack. 
 
 Project Notes:
