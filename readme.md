@@ -27,8 +27,8 @@ Answers for questions you might have:
 --
 1. Why not to use jQuery for scroll and animations, and Bootstrap for mobile-responsiveness?
 
-1.1 That project would require big amount of stock Bootstrap customisation.It can be quite hard to do it well. At Your website I've seen that sometimes there is used '!important', what means that at some point in the future  there is a chance of 'specifity wars' and overall in future CSS updates can be unstable, and website can behave differently on different devices.
-So, I hadn't used bootstrap in sake of validity of code. You can say that website will be maintained anyway, but between valid html/css and css with warnings  I would chose first-one no-brainer.
+1.1 That project would require big amount of stock Bootstrap customisation.It can be quite hard to do it well. At Your website I've seen that sometimes there is used '!important', what means that at some point in the future  there is a chance of 'specifity wars' and overall it's considered a very bad practice, because maintaning that type of code can be hard.
+So, I hadn't used bootstrap in sake of validity of code and ease of maintainance. You can say that website will be maintained anyway, but between valid html/css and css with warnings  I would chose first-one no-brainer.
 
 1.2 jQuery. First of all, jQuery weigths some kb, secondly - it always can be pulled into the project later.
 Speaking about kilobytes, my code(index.html + styles.min.css +  scroll.js) weights 17 kilobytes, while jQuery  weights 30kb(minified) and Bootstrap 4 almost 10 times more than my project(150kb minified).
